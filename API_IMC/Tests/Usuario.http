@@ -1,0 +1,10 @@
+POST https://localhost:5001/API/usuario/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Alys",
+    "nascimento" : "2001-05-08"
+}
+
+###
+GET https://localhost:5001/API/usuario/listar
