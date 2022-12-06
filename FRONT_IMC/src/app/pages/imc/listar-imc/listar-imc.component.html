@@ -1,0 +1,32 @@
+<mat-card class="container">
+    <mat-card-header>
+      <mat-card-title> Listar IMCs </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table>
+        <tr>
+          <th>#</th>
+          <th>Usuário</th>
+          <th>Peso</th>
+          <th>Altura</th>
+          <th>Imc</th>
+          <th>Classificação</th>
+          <th>Alterar</th>
+        </tr>
+        <tr *ngFor="let imc of imcs">
+          <td>{{ imc.id }}</td>
+          <td>{{ imc.usuario?.nome }}</td>
+          <td>{{ imc.peso }}</td>
+          <td>{{ imc.altura }}</td>
+          <td>{{ imc.imc }}</td>
+          <td>{{ imc.classificacao }}</td>
+          <td>
+            <a routerLink="/pages/imc/cadastrar/{{ imc.id }}">
+                Alterar
+              </a>
+        </td>
+        </tr>
+      </table>
+    </mat-card-content>
+  
+  </mat-card>
